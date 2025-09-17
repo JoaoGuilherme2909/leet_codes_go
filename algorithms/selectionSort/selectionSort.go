@@ -8,14 +8,14 @@ func main() {
 
 func searchLowest(arr []int) int {
 	menor := arr[0]
-	menor_indice := 0
-	for i, _ := range arr {
+	menorIndice := 0
+	for i := range arr {
 		if arr[i] < menor {
 			menor = arr[i]
-			menor_indice = i
+			menorIndice = i
 		}
 	}
-	return menor_indice
+	return menorIndice
 }
 
 func selectionSort(arr []int) []int {
