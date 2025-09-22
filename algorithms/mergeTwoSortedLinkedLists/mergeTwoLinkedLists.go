@@ -68,15 +68,12 @@ func sortedMerge(list1 *node, list2 *node) *node {
 		curr = curr.next
 	}
 
-	fmt.Println(curr)
-
-	return curr
+	return dummy.next
 }
 
 func printList(list1 *node) {
 	for list1 != nil {
 		fmt.Println(list1.data)
-		fmt.Println("->")
 		list1 = list1.next
 	}
 }
