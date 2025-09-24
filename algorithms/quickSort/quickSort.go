@@ -18,14 +18,22 @@ func quicksort(arr []int) []int {
 		}
 	}
 
+	fmt.Printf("left %s\n", left)
+	fmt.Printf("right %s\n", right)
+	fmt.Printf("pivot %s\n", pivot)
+
 	sortedLeft := quicksort(left)
 	sortedRight := quicksort(right)
+
+	fmt.Printf("sorted l %s\n", sortedLeft)
+	fmt.Printf("sorted r %s\n", sortedRight)
 
 	return append(append(sortedLeft, pivot), sortedRight...)
 }
 
 func main() {
-	arr := []int{19, 5, 3, 12, 7, 8, 1, 17, 11, 6, 4, 14, 2, 16, 9, 15, 10, 13, 18}
+	arr := []int{19, 5, 3, 12, 7}
+	// 8, 1, 17, 11, 6, 4, 14, 2, 16, 9, 15, 10, 13, 18
 	fmt.Println("Original:", arr)
 	sorted := quicksort(arr)
 	fmt.Println("Ordenado:", sorted)
